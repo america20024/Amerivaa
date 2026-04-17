@@ -382,7 +382,7 @@
             </div>
 </div>
 </footer>
-</body><!-- BOTÓN WHATSAPP -->
+</body><!-- BOTÓN FLOTANTE WHATSAPP -->
 <a href="https://wa.me/584244176230?text=Hola,%20quiero%20información"
    target="_blank"
    style="
@@ -400,6 +400,46 @@
    font-size: 30px;
    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
    z-index: 999;">
-   
    💬
 </a>
+
+<script>
+const numero = "584244176230";
+
+// BOTONES GENERALES
+document.querySelectorAll("button").forEach(btn => {
+  let texto = btn.innerText.toLowerCase();
+
+  if (texto.includes("trabajar con nosotros") || texto.includes("qué esperas")) {
+    btn.onclick = () => {
+      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20información%20sobre%20sus%20servicios`, "_blank");
+    };
+  }
+
+  if (texto.includes("agendar")) {
+    btn.onclick = () => {
+      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20agendar%20una%20consultoría`, "_blank");
+    };
+  }
+
+  if (texto.includes("portafolio")) {
+    btn.onclick = () => {
+      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20ver%20su%20portafolio`, "_blank");
+    };
+  }
+});
+
+// FORMULARIO A WHATSAPP
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let nombre = document.querySelector("input[type=text]").value;
+  let email = document.querySelector("input[type=email]").value;
+  let asunto = document.querySelector("select").value;
+  let mensaje = document.querySelector("textarea").value;
+
+  let texto = `Hola, soy ${nombre}. Email: ${email}. Asunto: ${asunto}. Mensaje: ${mensaje}`;
+
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank");
+});
+</script>

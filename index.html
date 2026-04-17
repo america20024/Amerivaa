@@ -383,77 +383,7 @@
 </div>
 </footer>
         
-<!-- BOTÓN WHATSAPP PRO -->
-<a href="https://wa.me/584244176230?text=Hola,%20quiero%20información%20sobre%20sus%20servicios"
-   target="_blank"
-   style="
-   position: fixed;
-   bottom: 20px;
-   right: 20px;
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   background-color: #25D366;
-   color: white;
-   padding: 12px 18px;
-   border-radius: 50px;
-   font-size: 16px;
-   font-weight: bold;
-   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-   z-index: 999;
-   animation: pulse 2s infinite;">
-   
-   💬 Escríbenos
-</a>
-
-<style>
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
-}
-</style>
-
-<script>
-const numero = "584244176230";
-
-// BOTONES
-document.querySelectorAll("button").forEach(btn => {
-  let texto = btn.innerText.toLowerCase();
-
-  if (texto.includes("trabajar con nosotros") || texto.includes("qué esperas")) {
-    btn.onclick = () => {
-      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20aduanas`, "_blank");
-    };
-  }
-
-  if (texto.includes("agendar")) {
-    btn.onclick = () => {
-      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20agendar%20una%20consultoría%20logística`, "_blank");
-    };
-  }
-
-  if (texto.includes("portafolio")) {
-    btn.onclick = () => {
-      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20ver%20su%20portafolio%20de%20servicios`, "_blank");
-    };
-  }
-});
-
-// FORMULARIO PRO
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let nombre = document.querySelector("input[type=text]").value;
-  let email = document.querySelector("input[type=email]").value;
-  let asunto = document.querySelector("select").value;
-  let mensaje = document.querySelector("textarea").value;
-
-  let texto = `🚀 NUEVO CLIENTE\n\n👤 Nombre: ${nombre}\n📧 Email: ${email}\n📦 Servicio: ${asunto}\n📝 Mensaje: ${mensaje}`;
-
-  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank");
-});
-</script></body><!-- BOTÓN FLOTANTE WHATSAPP -->
+</body><!-- BOTÓN FLOTANTE WHATSAPP -->
 <a href="https://wa.me/584244176230?text=Hola,%20quiero%20información"
    target="_blank"
    style="

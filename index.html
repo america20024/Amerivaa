@@ -382,7 +382,7 @@
             </div>
 </div>
 </footer>
-</body></html><script><!-- BOTÓN WHATSAPP -->
+</body><!-- BOTÓN WHATSAPP -->
 <a href="https://wa.me/584244176230?text=Hola,%20quiero%20información"
    target="_blank"
    style="
@@ -403,34 +403,3 @@
    
    💬
 </a>
-const numero = "584244176230";
-
-document.querySelectorAll("button").forEach(btn => {
-  if (btn.innerText.toLowerCase().includes("trabajar con nosotros") || 
-      btn.innerText.toLowerCase().includes("qué esperas")) {
-    btn.onclick = () => {
-      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20información`, "_blank");
-    };
-  }
-});
-
-document.querySelectorAll("button").forEach(btn => {
-  if (btn.innerText.toLowerCase().includes("agendar")) {
-    btn.onclick = () => {
-      window.open(`https://wa.me/${numero}?text=Hola,%20quiero%20agendar`, "_blank");
-    };
-  }
-});
-
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let nombre = document.querySelector("input[type=text]").value;
-  let email = document.querySelector("input[type=email]").value;
-  let mensaje = document.querySelector("textarea").value;
-
-  let texto = `Hola, soy ${nombre}. Email: ${email}. ${mensaje}`;
-
-  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank");
-});
-</script>
